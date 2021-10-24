@@ -45,14 +45,14 @@ def compressSingleChannel(channelDataMatrix, singularValuesLimit):
 
 # MAIN PROGRAM:
 print('*** Image Compression using SVD - a demo')
-aRed, aGreen, aBlue, originalImage = openImage('lena.png')
+aRed, aGreen, aBlue, originalImage = openImage('person.jpg')
 
 # image width and height:
-imageWidth = 512
-imageHeight = 512
+imageWidth = 875
+imageHeight = 745
 
 # number of singular values to use for reconstructing the compressed image
-singularValuesLimit = 1
+singularValuesLimit = 20
 
 # compress each color image component by singularvaluesLimit K
 aRedCompressed = compressSingleChannel(aRed, singularValuesLimit)
